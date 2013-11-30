@@ -168,7 +168,7 @@ bool hashbuster_lowl_probe(const struct lowlevel_device_info * const info)
 		       __func__, path);
 	
 	if ((!hashbuster_io(h, buf, buf)) || buf[1] != 0x07)
-		applogr(false, LOG_DEBUG, "%s: Identify sequence didn't match on %s",
+		applog(LOG_DEBUG, "%s: Identify sequence didn't match on %s",
 		        __func__, path);
 	
 	struct spi_port spi = {
